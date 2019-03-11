@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Text1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		System.out.println("请输入字符串：");
+		String s = in.nextLine();
+		System.out.println("请输入子串：");
+		String str = in.nextLine();
+		int longstr = 0;
+		while (true)
+		{
+			int a = s.indexOf(str);
+			if (a==-1) break;
+			System.out.println("查找到的子串位置为："+(a+longstr));
+			s = s.substring(a+str.length());
+			longstr += (a+str.length());
+		}
+		
+	}
+
+}
